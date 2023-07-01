@@ -1,0 +1,21 @@
+# Конфигурация логгера
+logger:
+  path: "logs/sender-logs.log"
+  level: "debug"
+
+kafka:
+  brokers: "localhost:9092,localhost:9093,localhost:9094"
+  topic: "stat"
+  main: "http://localhost:8000/kafka"
+
+# Конфигурация очереди
+rabbit:
+  host: "localhost"
+  port: "5672"
+  exchange: "test-exchange-events"
+  queue: "test-queue-events"
+  credential:
+    username: "guest"
+    password: "guest"
+  main: "http://localhost:8000/rabbit"
+
